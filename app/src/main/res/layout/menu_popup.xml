@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/menu_layout_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        android:background="@android:color/transparent">
+
+    <FrameLayout
+            android:id="@+id/fab_bg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/menu_layout_popup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Suspicious0dp"/>
+
+    <LinearLayout
+            android:id="@+id/main_search_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_end_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/search_w_96x96"
+                android:backgroundTint="@color/daynight_backColor"
+                app:borderWidth="1dp"
+                app:backgroundTint="@color/daynight_textColor"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:tint="@color/daynight_textColor"
+                app:maxImageSize="35dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/main_category_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_end_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/menu_layout_popup">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_category_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/category_96x96"
+                android:backgroundTint="@color/daynight_backColor"
+                app:borderWidth="1dp"
+                app:backgroundTint="@color/daynight_textColor"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:tint="@color/daynight_textColor"
+                app:maxImageSize="35dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/main_add_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_end_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/menu_layout_popup">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/add_w_96x96"
+                android:backgroundTint="@color/daynight_backColor"
+                app:borderWidth="1dp"
+                app:backgroundTint="@color/daynight_textColor"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:tint="@color/daynight_textColor"
+                app:maxImageSize="35dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/main_map_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_end_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/menu_layout_popup">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_map_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/map_w_96x96"
+                android:backgroundTint="@color/daynight_backColor"
+                app:borderWidth="1dp"
+                app:backgroundTint="@color/daynight_textColor"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:tint="@color/daynight_textColor"
+                app:maxImageSize="35dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/main_profile_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_end_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/menu_layout_popup">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_profile_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/profile2_w_96x96"
+                android:backgroundTint="@color/daynight_backColor"
+                app:borderWidth="1dp"
+                app:backgroundTint="@color/daynight_textColor"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:tint="@color/daynight_textColor"
+                app:maxImageSize="35dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/main_lenta_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_end_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/menu_layout_popup">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_lenta_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@android:drawable/ic_dialog_dialer"
+                android:backgroundTint="@color/daynight_backColor"
+                app:borderWidth="1dp"
+                app:backgroundTint="@color/daynight_textColor"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:tint="@color/daynight_textColor"
+                app:maxImageSize="25dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

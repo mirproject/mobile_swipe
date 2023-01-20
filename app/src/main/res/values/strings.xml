@@ -1,0 +1,153 @@
+<resources>
+    <string name="app_name">mobile</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="label_auth">Авторизация...</string>
+    <string name="label_description">Описание</string>
+    <!-- Enter/Registration -->
+    <string name="label_enter_register">Вход/Регистрация</string>
+    <string name="label_mob_phone">Моб.телефон</string>
+    <string name="label_enter">Войти</string>
+    <string name="label_registration">Регистрация</string>
+    <string name="label_register">Зарегистрироваться</string>
+    <string name="label_login">Логин</string>
+    <string name="label_name">Имя</string>
+    <string name="label_phone">Номер телефона</string>
+    <string name="label_email">Электронная почта</string>
+    <string name="label_password">Пароль</string>
+    <string name="label_new_password">Новый пароль</string>
+    <string name="label_new_password_empty">Новый пароль не задан</string>
+    <string name="label_password_repeat">Повторите пароль</string>
+    <string name="label_password_request">Не менее 8 символов, цифры 0-9 и заглавные буквы</string>
+    <string name="label_register_text1">Нажимая кнопку зарегистрироваться вы</string>
+    <string name="label_register_text2">соглашаетесь с</string>
+    <string name="label_register_text3">Условиями использования</string>
+    <string name="label_register_text4">и</string>
+    <string name="label_register_text5">Политикой конфиденциальности</string>
+    <string name="label_register_confirm">Во время регистрации на указанный Вами номер было отправлено sms c кодом
+        активации. Для завершения регистрации введите код.
+    </string>
+    <string name="label_register_code">Код активации</string>
+    <string name="label_button_confirm">Подтвердить</string>
+    <string name="label_post_list">Лента публикаций</string>
+    <string name="label_subscribers">Подписчики</string>
+    <string name="label_subscribes">Подписки</string>
+    <string name="label_contacts">Контакты</string>
+    <string name="label_about_myself">О себе</string>
+    <string name="label_write">Написать</string>
+    <string name="label_exit">Выход</string>
+    <string name="label_subscribe">Подписаться</string>
+    <string name="label_unsubscribe">Отписаться</string>
+
+    <string name="label_chats">Чаты</string>
+    <string name="label_add_album">+Альбом</string>
+    <string name="label_album_cover">Выбор обложки альбома</string>
+
+    <string name="label_settings">Настройки</string>
+    <string name="label_settings_edit">Редактировать профиль</string>
+    <string name="label_settings_account">Аккаунт</string>
+    <string name="label_settings_about">О себе</string>
+    <string name="label_settings_notify">Уведомления</string>
+    <string name="label_settings_security">Конфиденциальность</string>
+    <string name="label_settings_confirm">Подтвердить аккаунт</string>
+    <string name="label_settings_premium">Премиум</string>
+    <string name="label_settings_change_photo">Изменить фото</string>
+    <string name="label_settings_change_pass">Изменить пароль</string>
+    <string name="label_settings_changing_pass">Изменение пароля</string>
+    <string name="label_settings_save_changes">Сохранить изменения</string>
+    <string name="label_settings_about_hint">Любые подробности, например род занятий или город</string>
+
+    <string name="label_load_photo">Фото</string>
+    <string name="label_load_video">Видео</string>
+    <string name="label_load_from_device">Загрузить</string>
+    <string name="label_select_user">Отметить</string>
+    <string name="label_select_map">Добавить на карту</string>
+    <string name="label_select_category">Категория</string>
+    <string name="label_upload">Опубликовать</string>
+    <string name="label_delete_confirm">Подтвердите удаление</string>
+    <string name="label_delete">Удалить?</string>
+    <string name="label_yes">Да</string>
+    <string name="label_no">Нет</string>
+    <string name="label_comment">Комментарий</string>
+    <string name="label_find">Найти</string>
+    <string name="label_searching">Поиск...</string>
+    <string name="label_uploading">Загрузка...</string>
+    <string name="label_refreshing">Обновление...</string>
+    <string name="label_saving">Сохранение...</string>
+    <string name="label_adding">Добавление...</string>
+    <string name="label_registration_process">Регистрация...</string>
+    <string name="label_edit">Улучшить</string>
+    <string name="label_rotate">Повернуть</string>
+    <string name="label_increase">Увеличить</string>
+    <string name="label_decrease">Уменьшить</string>
+    <string name="label_done">Готово</string>
+    <string name="label_photo_capture_succeeded">Фото успешно сохранено</string>
+    <string name="label_change_camera">Камера</string>
+    <string name="label_tune">Цвета</string>
+    <string name="label_capture">Снять</string>
+    <string name="label_add">Добавить</string>
+    <string name="label_stop_capture">Стоп</string>
+
+    <string name="label_find_accounts">Подтвержденные аккаунты</string>
+
+    <string name="label_categories">Категории публикаций</string>
+    <string name="label_category_relax">Отдых и туризм</string>
+    <string name="label_category_business">Бизнес</string>
+    <string name="label_category_culture">Культура</string>
+    <string name="label_category_science">Наука</string>
+    <string name="label_category_news">Новости</string>
+    <string name="label_category_architecture">Архитектура</string>
+    <string name="label_category_cars">Авто</string>
+
+    <string name="label_subscribers_enter_name">Введите имя, чтобы найти пользователя</string>
+    <string name="label_subscribers_send">Переслать</string>
+    <string name="label_subscribers_out">Отписаться</string>
+
+    <string name="label_profile_contacts">https://web-сайт</string>
+    <string name="label_profile_telegram">Телеграмм</string>
+    <string name="label_profile_whatsapp">WhatsApp</string>
+    <string name="label_profile_phone">Телефон</string>
+    <string name="label_profile_maps">https://yandex.ru/maps</string>
+    <string name="label_profile_photo_size">Размер фото для профиля: 500x500</string>
+    <string name="label_profile_photo_size_select">Размер выбранного фото</string>
+    <string name="label_profile_photo_size_fill">Сжать</string>
+    <string name="label_profile_photo_size_cut">Обрезать</string>
+    <string name="label_profile_albums">Альбомы</string>
+    <string name="label_profile_new_album">Новый альбом</string>
+    <string name="label_profile_album_name">Наименование</string>
+    <string name="label_profile_publications">Публикации</string>
+    <string name="label_profile_add_album">Добавление альбома</string>
+
+    <string name="label_map_russia">Россия</string>
+    <string name="label_map_top">Топ публикаций</string>
+    <string name="label_map_week">За неделю</string>
+    <string name="label_map_month">За месяц</string>
+    <string name="label_map_year">За год</string>
+    <string name="label_on_map">На карте</string>
+
+    <string name="error_registration">Ошибка регистрации</string>
+    <string name="error_auth">Ошибка авторизации</string>
+    <string name="error_filed_empty_user_name">Не заполнено поле: "Логин"</string>
+    <string name="error_filed_empty_user_email">Не заполнено поле: "Электронная почта"</string>
+    <string name="error_filed_empty_user_phone">Не заполнено поле: "Номер телефона"</string>
+    <string name="error_filed_empty_user_pass">Не заполнено поле: "Пароль"</string>
+    <string name="error_filed_incorrect_user_email">Не корректно заполнено поле: "Электронная почта"</string>
+    <string name="error_filed_incorrect_user_pass">Не корректно заполнено поле: "Пароль"</string>
+    <string name="error_filed_pass">Подтверждение пароля не совпадает</string>
+    <string name="error_content_loading">Ошибка загрузки публикаций</string>
+    <string name="error_create_album">Ошибка создания альбома</string>
+    <string name="album_properties">Свойства альбома</string>
+    <string name="choose_album_cover">Выбрать обложку</string>
+    <string name="seen_by_everyone">Видят все</string>
+    <string name="seen_by_followers">Видят только подписчики</string>
+    <string name="save">Сохранить</string>
+    <string name="title">Название</string>
+    <string name="delete">Удалить</string>
+
+</resources>
+

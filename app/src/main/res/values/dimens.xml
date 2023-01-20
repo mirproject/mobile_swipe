@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_end_margin">30dp</dimen>
+    <dimen name="fab_1_ejection">420dp</dimen>
+    <dimen name="fab_2_ejection">350dp</dimen>
+    <dimen name="fab_3_ejection">280dp</dimen>
+    <dimen name="fab_4_ejection">210dp</dimen>
+    <dimen name="fab_5_ejection">140dp</dimen>
+    <dimen name="fab_6_ejection">70dp</dimen>
+    <dimen name="fab_7_ejection">0dp</dimen>
+    <dimen name="fab_del">50dp</dimen>
+    <dimen name="image_round">15dp</dimen>
+</resources>

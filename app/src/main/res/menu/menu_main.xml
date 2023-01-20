@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="ru.mobile.activities.SelectIdentityActivity">
+    <group android:id="@+id/menugroup1" >
+        <item
+                android:id="@+id/menu_setting"
+                android:icon="@drawable/success_icon"
+                android:layout_width="50dip"
+                tools:ignore="MenuTitle"/>
+        <item
+                android:id="@+id/menu_search"
+                android:icon="@drawable/launch_icon"
+                android:layout_width="50dip"
+                tools:ignore="MenuTitle"/>
+        <item
+                android:id="@+id/menu_category"
+                android:icon="@drawable/error_icon"
+                android:layout_width="50dip"
+                tools:ignore="MenuTitle"/>
+        <item
+                android:id="@+id/menu_add"
+                android:icon="@drawable/warning_icon"
+                android:layout_width="50dip"
+                tools:ignore="MenuTitle"/>
+        <item
+                android:id="@+id/menu_map"
+                android:icon="@drawable/warning_icon"
+                android:layout_width="50dip"
+                tools:ignore="MenuTitle"/>
+        <item
+                android:id="@+id/menu_profile"
+                android:icon="@drawable/close"
+                android:layout_width="50dip"
+                tools:ignore="MenuTitle">
+        </item>
+    </group>
+</menu>
