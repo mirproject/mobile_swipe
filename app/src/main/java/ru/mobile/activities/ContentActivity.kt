@@ -1,17 +1,19 @@
 package ru.mobile.activities
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import ru.mobile.databinding.ActivityContentBinding
 import ru.mobile.entities.LogEventTypeEnum
+import ru.mobile.entities.dto.LentaContentDTO
 import ru.mobile.entities.dto.SelectedContentDTO
 import ru.mobile.entities.dto.UserEntityDTO
 import ru.mobile.entities.response.PublicationApiResponse
 import ru.mobile.fragments.BaseMenuFragment
-import ru.mobile.services.ContentService
 import ru.mobile.services.UserService
 import ru.mobile.usecases.DeleteContentDialogUsecase
+import ru.mobile.utils.OnSwipeTouchListener
 
 class ContentActivity : AppCompatActivity() {
 
@@ -19,6 +21,7 @@ class ContentActivity : AppCompatActivity() {
     private val userService: UserService = UserService()
 
     private val deleteContentDialog: DeleteContentDialogUsecase = DeleteContentDialogUsecase()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityContentBinding = ActivityContentBinding.inflate(layoutInflater)
@@ -32,32 +35,68 @@ class ContentActivity : AppCompatActivity() {
             LogEventTypeEnum.GO_PAGE,
             "{ \"pageName\":\"Контент\" }"
         )
-        val selectedPublication = SelectedContentDTO.publication!!
+        swipeListener()
+        createScreen()
+    }
 
+    private fun createScreen() {
         activityContentBinding.contentChatLayout.visibility = View.INVISIBLE
         activityContentBinding.contentSendToLayout.visibility = View.INVISIBLE
         activityContentBinding.playStartImg.visibility = View.INVISIBLE
         activityContentBinding.simpleVideoView.visibility = View.INVISIBLE
         activityContentBinding.contentLinearLayout.visibility = View.VISIBLE
+        val publication = SelectedContentDTO.publication!!
+        activityContentBinding.contentUserName.text = publication.userName
 
-        activityContentBinding.contentDelete.setOnClickListener(View.OnClickListener {
-            if (selectedPublication.userUUID == UserEntityDTO.userUUID) {
-                deleteContentDialog.execute(this)
+        SelectedContentDTO.imageBitmap = publication.imageBitmapThumbnail
+        if (publication.imageBitmapBase != null) {
+            activityContentBinding.contentImage.setImageBitmap(publication.imageBitmapBase)
+            loadImage(publication)
+        }
+        onClickHandler(publication)
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun swipeListener() {
+        activityContentBinding.contentImage.setOnTouchListener(object :
+            OnSwipeTouchListener(this@ContentActivity) {
+            override fun onSwipeLeft() {
+                super.onSwipeLeft()
+                changeContent("next")
+            }
+
+            override fun onSwipeRight() {
+                super.onSwipeRight()
+                changeContent("previous")
             }
         })
-        activityContentBinding.contentUserName.text = selectedPublication.userName
-
-        val publication = SelectedContentDTO.publication!!
-        SelectedContentDTO.imageBitmap = publication.imageBitmapThumbnail
-
-        if (SelectedContentDTO.imageBitmap != null) {
-            activityContentBinding.contentImage.setImageBitmap(SelectedContentDTO.imageBitmap)
-            loadImage(publication)
-        } else {
-            activityContentBinding.contentImage.setImageResource(SelectedContentDTO.imageDrawable)
-        }
-
     }
+
+    private fun changeContent(swipe: String) {
+        val selectedPublicationIndex = SelectedContentDTO.publication?.let {
+            LentaContentDTO.publications.indexOf(it)
+        } ?: 0
+        val previousPublicationIndex =
+            if (selectedPublicationIndex == 0) 0 else selectedPublicationIndex - 1
+        val nextPublicationIndex = selectedPublicationIndex + 1
+        val publication = when (swipe) {
+            "next" -> if (nextPublicationIndex < LentaContentDTO.publications.size) LentaContentDTO.publications[nextPublicationIndex] else SelectedContentDTO.publication
+            "previous" -> if (previousPublicationIndex < LentaContentDTO.publications.size) LentaContentDTO.publications[previousPublicationIndex] else SelectedContentDTO.publication
+            else -> SelectedContentDTO.publication
+        }
+        SelectedContentDTO.publication = publication
+        SelectedContentDTO.imageBitmap = publication?.imageBitmapBase
+        SelectedContentDTO.fileName = publication?.description ?: ""
+        SelectedContentDTO.userName = publication?.userName ?: ""
+        SelectedContentDTO.imageBitmapThumbnail = publication?.imageBitmapThumbnail
+        createScreen()
+    }
+
+    private fun onClickHandler(selectedPublication: PublicationApiResponse) =
+        activityContentBinding.contentDelete.setOnClickListener {
+            if (selectedPublication.userUUID == UserEntityDTO.userUUID)
+                deleteContentDialog.execute(this)
+        }
 
     private fun loadImage(publication: PublicationApiResponse) {
         Thread {
@@ -67,5 +106,4 @@ class ContentActivity : AppCompatActivity() {
             }
         }.start()
     }
-
 }
