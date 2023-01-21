@@ -3,7 +3,9 @@ package ru.mobile.activities
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import ru.mobile.R
 import ru.mobile.databinding.ActivityContentBinding
 import ru.mobile.entities.LogEventTypeEnum
 import ru.mobile.entities.dto.LentaContentDTO
@@ -63,11 +65,20 @@ class ContentActivity : AppCompatActivity() {
             override fun onSwipeLeft() {
                 super.onSwipeLeft()
                 changeContent("next")
+                val rotateAnimation =
+                    AnimationUtils.loadAnimation(this@ContentActivity, R.anim.animate_left_slide)
+                rotateAnimation.duration = 250
+                activityContentBinding.contentImage.startAnimation(rotateAnimation)
+
             }
 
             override fun onSwipeRight() {
                 super.onSwipeRight()
                 changeContent("previous")
+                val rotateAnimation =
+                    AnimationUtils.loadAnimation(this@ContentActivity, R.anim.animate_right_slide)
+                rotateAnimation.duration = 250
+                activityContentBinding.contentImage.startAnimation(rotateAnimation)
             }
         })
     }
